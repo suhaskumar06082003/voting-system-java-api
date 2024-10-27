@@ -1,0 +1,23 @@
+# Additional Features Implemented  in other branch named (
+
+This document outlines the additional features implemented in the Voting API.
+
+## 1. Candidate Removal
+- Endpoint: `/removecandidate?name={name}`
+- **Functionality: Allows users to remove a candidate from the voting system if they exist.
+
+## 2. Vote History
+- Endpoint: `/votehistory?name={name}`
+- Functionality: Retrieves the history of votes for a specified candidate, returning the timestamps of when votes were cast.
+
+## 3. Maximum Votes Validation
+- Feature: Limits the number of votes a candidate can receive.
+- Configuration: Uses an environment variable to set a maximum votes threshold.
+
+## 4. Reset Votes
+- Endpoint: `/resetvotes`
+- Functionality: Resets all vote counts for candidates to zero.
+
+## 5. Candidate Details
+- Endpoint: `/canditatedetails?name={name}`
+- Functionality: Provides detailed information about a candidate, including additional attributes such as party affiliation.
