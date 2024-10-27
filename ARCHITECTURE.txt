@@ -1,0 +1,24 @@
+# Architecture and Design of Voting API
+
+## Overview
+The Voting API is designed using the Spring Boot framework, following a layered architecture that separates concerns into distinct components: controller, service, and model.
+
+## Components
+
+1. Controller Layer:
+   - Handles HTTP requests and maps them to appropriate service methods.
+   - Provides RESTful endpoints for user interaction.
+
+2. Service Layer:
+   - Contains the business logic of the application.
+   - Manages in-memory data storage for candidates and votes.
+
+3. Model Layer:
+   - Represents the data structures used in the application.
+   - Contains the `Candidate` class with properties such as name and vote count.
+
+## Flow
+1. Client makes a request to a specific endpoint.
+2. The controller receives the request and delegates the processing to the service layer.
+3. The service processes the request, updates the in-memory data, and returns the result to the controller.
+4. The controller sends the response back to the client.
