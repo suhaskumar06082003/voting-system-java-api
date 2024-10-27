@@ -46,6 +46,15 @@ public class VoteService {
                 .map(Candidate::getName)
                 .orElse("No candidates available.");
     }
+
+    public String removeCandidate(String name) {
+        if (candidates.containsKey(name)) {
+            candidates.remove(name);
+            return "Candidate " + name + " removed successfully.";
+        }
+        return "Candidate " + name + " does not exist.";
+    }
+    
 }
 
 
